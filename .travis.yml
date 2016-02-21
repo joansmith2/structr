@@ -1,22 +1,14 @@
+---
 language: java
-
 jdk:
-  - oraclejdk7
-  - oraclejdk8
-
-branches:
-  only:
-    - master
-    - develop
-
+- oraclejdk7
+- oraclejdk8
 cache:
   directories:
-    - $HOME/.m2
-
+  - "$HOME/.m2"
 env:
-  - TEST_MODULE=structr-core
-  - TEST_MODULE=structr-rest
-  - TEST_MODULE=structr-ui
-
-script:
-  mvn test -Dmaven.javadoc.skip=true -Dassembly.skipAssembly=true -DskipDeb=true -Denforcer.skip=true -pl $TEST_MODULE
+- TEST_MODULE=structr-core
+- TEST_MODULE=structr-rest
+- TEST_MODULE=structr-ui
+script: mvn test -Dmaven.javadoc.skip=true -Dassembly.skipAssembly=true -DskipDeb=true
+  -Denforcer.skip=true -pl $TEST_MODULE
