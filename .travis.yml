@@ -1,7 +1,4 @@
+---
 language: java
 jdk:
-  - oraclejdk7
-branches:
-  only:
-    - master
-    - develop
+- oraclejdk7
